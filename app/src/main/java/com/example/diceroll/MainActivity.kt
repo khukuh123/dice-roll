@@ -1,5 +1,6 @@
 package com.example.diceroll
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.diceroll.databinding.ActivityMainBinding
@@ -17,6 +18,10 @@ class MainActivity : AppCompatActivity() {
 
         binding.rollButton.setOnClickListener {
             rollDice()
+        }
+        binding.about.setOnClickListener {
+            val intent = Intent(this@MainActivity, AboutActivity::class.java)
+            startActivity(intent)
         }
     }
 

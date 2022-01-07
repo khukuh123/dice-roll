@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Dice Roll</string>
     <string name="textRollBtn">ROLL</string>
+    <string name="about">ABOUT</string>
+    <string name="john_doe">John Doe</string>
+    <string name="john_doe_email">john.doe@gmail.com</string>
 </resources>
