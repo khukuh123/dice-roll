@@ -9,6 +9,7 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private var randomInt = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,12 +24,17 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, AboutActivity::class.java)
             startActivity(intent)
         }
+        binding.result.setOnClickListener {
+            val intent = Intent(this@MainActivity, ResultActivity::class.java)
+            intent.putExtra(ResultActivity.RESULT_EXTRA, randomInt)
+            startActivity(intent)
+        }
     }
 
     private fun rollDice() {
 
 //        val randomInt = (1..6).random()
-        val randomInt = Random().nextInt(6) + 1
+        randomInt = Random().nextInt(6) + 1
         val drawableResource = when (randomInt){
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
@@ -39,5 +45,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.diceImage.setImageResource(drawableResource)
+
+        binding.result.isEnabled = true
     }
 }

@@ -24,6 +24,14 @@
         android:text="@string/textRollBtn"/>
 
     <Button
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:enabled="false"
+        android:text="@string/result"/>
+
+    <Button
         android:id="@+id/about"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
