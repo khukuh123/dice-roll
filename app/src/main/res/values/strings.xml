@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Dice Roll</string>
     <string name="textRollBtn">ROLL</string>
+    <string name="about">ABOUT</string>
 </resources>
